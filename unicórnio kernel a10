@@ -1,13 +1,12 @@
 
-    strategy
+    strategy:
       fail-fast: false
       matrix:
         model: [ "A105FN" ]
         
         - name: Kernel Configure
           run: |
-            set -e -o pipefail
-            ./cruelbuild config \
+          ./Unicórniobuild config
                          os_patch_level = 2021-02  \
                          model=${{ matrix.model }} \
                          name="Unicórnio-v1.0"     \
